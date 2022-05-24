@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker's Shop - Detail Product</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dp.css">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Sneaker's Shop</a></h1>
+        <nav>
+            <a class="main-nav" href="./listProduct.html">List of Products</a>
+            <a class="main-nav" href="./aboutUs.html">About Us</a>
+            <a class="main-nav" href="./aboutProducts.html">About Products</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="info">
+            <div id="image">
+                <img id="main" src="./list barang/adidas daily 3.0.jpg" alt="Adidas Daily 3.0">
+                <div class="column">
+                    <img id="img1" src="./list barang/adidas daily 3.0 (2).jpg" alt="Adidas Daily 3.0">
+                    <img id="img2" src="./list barang/adidas daily 3.0 (1).jpg" alt="Adidas Daily 3.0">
+                </div>
+            </div>
+            <div id="isi">
+                <h2 id="nama">Adidas Daily 3.0</h2>
+                <p id="stock">in stock</p>
+                <p id="harga">Rp.1,360,000,-</p>
+    
+                <form action="#" method="POST" onsubmit="return required();">
+                    <p>Size (US):</p>
+                    <div id="size">
+                        <input type="radio" id="six" name="Size" value="6">
+                        <label for="six">6</label>
+                        <input type="radio" id="sevp" name="Size" value="7.5"> 
+                        <label for="sevp">7.5</label>
+                        <input type="radio" id="eightp" name="Size" value="8.5">
+                        <label for="eightp">8.5</label>
+                        <input type="radio" id="nine" name="Size" value="9"> 
+                        <label for="nine">9</label>
+                       <input type="radio" id="ninep" name="Size" value="9.5"> 
+                       <label for="ninep">9.5</label>
+                    </div>
+                    <div id="kuantitas">
+                        <p><br>Quantity:</p>
+                        <input type="number" name="quantity" id="quantity" value="1" min="1" max="5">
+                    </div>
+                    <input id="submit" type="submit" value="Add to Cart">
+                </form>
+    
+                <script type="text/javascript">
+                    function required(){
+                        let valid1 = document.getElementById("six").checked || document.getElementById("sevp").checked ||
+                            document.getElementById("eightp").checked || document.getElementById("nine").checked ||
+                            document.getElementById("ninep").checked;
+                        if(valid1){
+                            alert("Added to Cart!");
+                            return true;
+                        } else if (!valid1) {
+                            alert('Choose Size!');
+                            return false;
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="info2">
+            <div id="deskripsi">
+                <h4>Product Description:</h4>
+                <p>
+                   <em>LACE-UP CANVAS TRAINERS WITH MODERN STYLE.</em><br><br>
+                    A fresh take on a classic, these adidas shoes blend a heritage feel with 
+                    modern materials and design. Your walk across campus has never looked or felt this good.
+                </p>
+            </div>
+
+            <button id="btn1" onclick="show();">Size Chart</button>
+            <div id="sizeChart" style="display: none;">
+                <table>
+                    <tr>
+                        <th scope="col">UK</th>
+                        <th scope="col">US</th>
+                        <th scope="col">EURO</th>
+                        <th scope="col">CM</th>
+                    </tr>
+                    <tr>
+                        <td>3.5</td>
+                        <td>6</td>
+                        <td>36.5</td>
+                        <td>23</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>6.5</td>
+                        <td>37.5</td>
+                        <td>23.5</td>
+                    </tr>
+                    <tr>
+                        <td>4.5</td>
+                        <td>7</td>
+                        <td>38</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>7.5</td>
+                        <td>38.5</td>
+                        <td>24.5</td>
+                    </tr>
+                    <tr>
+                        <td>5.5</td>
+                        <td>8</td>
+                        <td>39</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>8.5</td>
+                        <td>40</td>
+                        <td>25.5</td>
+                    </tr>
+                    <tr>
+                        <td>6.5</td>
+                        <td>9</td>
+                        <td>40.5</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>9.5</td>
+                        <td>41</td>
+                        <td>26.5</td>
+                    </tr>
+                </table>
+            </div>
+
+            <script>
+                function show(){
+                    let dis = document.getElementById("sizeChart")
+                    if(dis.style.display == 'none'){
+                        dis.style.display = 'block';
+                    } else{
+                        dis.style.display = 'none';
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    
+    <div id="foot">
+        &nbsp;
+    </div>
+    <footer>
+        <p>2021 &copy; Sneaker's Shop.All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

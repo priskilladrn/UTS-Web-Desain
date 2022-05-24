@@ -1,0 +1,293 @@
+#image{
+    margin-top: 15px;
+    display: flex;
+    flex-shrink: 1;
+    flex-wrap: wrap;
+}
+
+#isi{
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+#stock{
+    color: rgb(158, 158, 158);
+    margin: 5px 16px;
+}
+
+#harga{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 20px 10px;
+    padding-bottom: 5px;
+}
+
+.column{
+    display: flex;
+    flex-direction: row;
+}
+
+#size{
+    padding: 15px;
+    float: left;
+}
+
+#size input{
+    position: fixed;
+    opacity: 0;
+}
+
+#size label{
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+    width: 55px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+#size label:hover{
+    background-color: black;
+    color: white;
+}
+
+#size input:checked + label{
+    background-color: black;
+    color: white;
+}
+
+#quantity{
+    width: 50%;
+    height: 35px;
+    margin: 15px;
+    text-align: center;
+}
+
+form{
+    padding-left: 10px;
+    display: inline-block;
+}
+
+#color{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+#color input{
+    position: fixed;
+    opacity: 0;
+}
+
+#color label{
+    display: inline-block;
+    padding-top: 10px;
+    width: 55px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#color label:hover{
+    background-color: black;
+    color: white;
+}
+
+#color input:checked + label{
+    background-color: black;
+    color: white;
+}
+
+#quantity{
+    border: 1px solid black;
+}
+
+#submit{
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-left: 0px;
+    padding: 10px;
+    width: 50%;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#submit:hover{
+    background-color: white;
+    color: black;
+}
+
+.info2{
+    border: 2px solid rgb(209, 209, 209);
+    padding: 15px;
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+#deskripsi h4{
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+#deskripsi p{
+    margin-left: 20px;
+    padding-bottom: 20px;
+    line-height: 22px;
+}
+
+td{
+    padding: 15px;
+}
+
+th{
+    padding: 10px;
+}
+
+tr{
+    background-color: rgb(233, 233, 233);
+}
+
+#btn1{
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#btn1:hover{
+    color: white;
+    background-color: black;
+}
+
+@media screen and(max-width: 399px) {
+    #nama{
+        margin: 10px;
+        font-weight:500;
+        font-size: 18px;
+    }
+    #main{
+        max-width: 280px;
+        max-height: 280px;
+    }
+    .column img{
+        max-width: 140px;
+        max-height: 140px;
+    }
+}
+
+@media screen and (max-width:559px) {
+    .info{
+        padding-bottom: 20px;
+    }
+    #main{
+        max-width: 280px;
+        max-height: 280px;
+    }
+    .column img{
+        max-width: 140px;
+        max-height: 140px;
+    }
+    #nama{
+        margin: 10px;
+        font-weight:500;
+        font-size: 25px;
+    }
+    #image{
+        margin-top: 0;
+    }
+    td{
+        padding: 10px;
+    }
+    
+    th{
+        padding: 8px;
+    }
+    #deskripsi h4{
+        font-size: 16px;
+    }
+    
+    #deskripsi p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (min-width: 560px){
+    .info{
+        display: flex;
+        padding-bottom: 20px;
+    }
+    #main{
+        max-width: 350px;
+        max-height: 350px;
+    }
+    .column img{
+        max-width: 175px;
+        max-height: 175px;
+    }
+    #nama{
+        margin: 10px;
+        font-weight:500;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 965px) {
+    #main{
+        max-width: 450px;
+        max-height: 450px;
+        display: block;
+        position: relative;
+    }
+    .column img{
+        max-width: 225px;
+        max-height: 225px;
+        display: flex;
+    }
+    #nama{
+        margin: 10px;
+        font-weight:500;
+        font-size: 30px;
+    }
+    #submit{
+        font-size: 15px;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .info{
+        display: flex;
+        flex-direction: row;
+    }
+    #main{
+        max-width: 400px;
+        max-height: 400px;
+        display: block;
+        position: relative;
+    }
+    .column img{
+        max-width: 200px;
+        max-height: 200px;
+        display: flex;
+    }
+    #image{
+        flex-direction: column;
+    }
+    #nama{
+        margin: 10px;
+        font-weight:500;
+        font-size: 40px;
+    }
+    #submit{
+        font-size: 15px;
+        width: 50%;
+    }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker's Shop - About Products</title>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./aboutProduct.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Sneaker's Shop</a></h1>
+        <nav>
+            <a class="main-nav" href="./listProduct.html">List of Products</a>
+            <a class="main-nav" href="./aboutUs.html">About Us</a>
+            <a class="main-nav" href="./aboutProducts.html">About Products</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2 class="title">Add Products</h2>
+        <form action="#" method="post" autocomplete="off" onsubmit="return required();">
+            <div id="foto">
+                <label for="image">Select Image: </label>
+                <input type="file" name="image" accept="image/*" id="image" multiple>
+                <br>
+            </div>
+
+            <div id="nama">
+                <label for="Name">Product Name: </label>
+                <input type="text" name="Name" id="Name">
+                <br>
+            </div>
+
+            <div id="harga">
+                <label for="Price">Price: </label>
+                <input type="number" name="Price" id="Price" min="0">
+                <br>
+            </div>
+
+            <div id="ukuran">
+                <p id="Us">Size (US):</p>
+                <div id="size">
+                    <input type="checkbox" name="Size" value="6" id="six">
+                    <label for="six">6</label>
+                    <input type="checkbox" name="Size" value="6.5" id="sixp">
+                    <label for="sixp">6.5</label>
+                    <input type="checkbox" name="Size" value="7" id="sev">
+                    <label for="sev">7</label>
+                    <input type="checkbox" name="Size" value="7.5" id="sevp">
+                    <label for="sevp">7.5</label>
+                    <input type="checkbox" name="Size" value="8" id="eight">
+                    <label for="eight">8</label>
+                    <input type="checkbox" name="Size" value="8.5" id="eightp">
+                    <label for="eightp">8.5</label>
+                    <input type="checkbox" name="Size" value="9" id="nine">
+                    <label for="nine">9</label>
+                    <input type="checkbox" name="Size" value="9.5" id="ninep"> 
+                    <label for="ninep">9.5</label>
+                </div>
+                <br>
+                <br> <br>
+            </div>
+
+            <div id="warna"> 
+                <div id="Color">
+                    <label for="Color">Color: </label> <br>
+                    <input type="text" name="Color" id="main">
+                </div>
+                <p id="addCol">+ Add More Color</p>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    $("#addCol").click(function(){
+                        $("#Color").html($("#Color").html() + '<br><input type="text" name="Color">');
+                    })
+                })
+            </script>
+
+            <div id="stok">
+                <label for="Stock">Stock: </label>
+                <input type="number" name="Stock" id="Stock" min="1">
+            </div>
+
+            <div id="deskripsi">
+                <label for="Description">Product Description: </label> <br>
+                <textarea name="Description" id="Description" cols="30" rows="10"></textarea>
+            </div>
+
+            <input type="submit" value="Send" id="submit">
+        </form>
+        <script>
+            function required(){
+                let img = document.getElementById('image').value;
+                let nama = document.getElementById('Name').value;
+                let harga = document.getElementById('Price').value;
+                let warna = document.getElementById('main').value;
+                let stok = document.getElementById('Stock').value;
+                let deskrip = document.getElementById('Description').value;
+                let uk = document.getElementsByName('Size');
+                let flag = false;
+                if(!img){
+                    alert('Please Input Product Image!');
+                    return false;
+                }
+                if(!nama){
+                    alert('Please Input Product Name!');
+                    return false;
+                }
+                if(!harga){
+                    alert('Please Input Product Price!');
+                    return false;
+                }
+                for(var i = 0; i < uk.length; i++){
+                    if(uk[i].checked){
+                        flag = true;
+                        break;
+                    }
+                }
+                if(!flag){
+                    alert('Please Input Product Size!');
+                    return false;
+                }
+                if(!warna){
+                    alert('Please Input Product Color!');
+                    return false;
+                }
+                if(!stok){
+                    alert('Please Input Product Stock!');
+                    return false;
+                }
+                if(!deskrip){
+                    alert('Please Input Product Description!');
+                    return false;
+                }
+                if(img && nama && harga && warna && stok && deskrip && flag){
+                    alert('Product Added!');
+                    return true;
+                }
+            }
+        </script>
+
+    </div>
+
+    <div id="foot">
+        &nbsp;
+    </div>
+    <footer>
+        <p>2021 &copy; Sneaker's Shop.All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
